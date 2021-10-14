@@ -45,7 +45,7 @@ function displayNotes()
     }
     let html=""
     notesObj.forEach(function(element,index) {
-        html+=`<div class="noteCard" style="width: 18rem;">
+        html+=`<div class="card mx-1" style="width: 18rem;">
         
         <div class="card-body">
           <h5 class="card-title">${titleObj[index]}</h5>
@@ -93,7 +93,7 @@ let search = document.getElementById("searchTxt");
 search.addEventListener("input", function(){
 
     let inputVal = search.value.toLowerCase();
-    let noteCards = document.getElementsByClassName("noteCard")
+    let noteCards = document.getElementsByClassName("card")
     Array.from(noteCards).forEach(function(element){
         let cardTxt=element.getElementsByTagName("p")[0].innerText;
         if(cardTxt.includes(inputVal) ){ 
